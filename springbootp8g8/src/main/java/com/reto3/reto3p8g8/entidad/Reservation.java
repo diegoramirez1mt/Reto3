@@ -45,7 +45,7 @@ public class Reservation implements Serializable{
 /* Falta saber como se asocia y como toma el Id message*/    
     @ManyToOne    
     @JoinColumn(name = "id")
-    @JsonIgnoreProperties("reservation")// Lo adiciono Mario
+    @JsonIgnoreProperties("reservations")// Lo adiciono Mario
     private Game game;
     
     @ManyToOne

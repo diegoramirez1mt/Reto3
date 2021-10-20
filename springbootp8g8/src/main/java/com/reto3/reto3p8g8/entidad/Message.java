@@ -43,7 +43,7 @@ public class Message implements Serializable{
     private Game game;
     
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "clientid")
     @JsonIgnoreProperties({"messages","reservations","client"})// es para que lo ignore//ignore para que no se genere ciclo de un ciclo infinito
     private Client client;
 }
