@@ -43,7 +43,11 @@ public class Game implements Serializable{
     private String description;
     
     
-/* Falta saber como se asocia*/
+    /** 
+    * @author Diego.Ramirez
+    * Escrito el dia 09.10.2021
+    * Control de muchos a uno
+    */
     @ManyToOne
     @JoinColumn(name = "categoryId")
     @JsonIgnoreProperties("games")//ignore para que no se genere ciclo de un ciclo infinito

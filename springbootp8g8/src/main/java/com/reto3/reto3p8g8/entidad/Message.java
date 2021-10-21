@@ -33,7 +33,6 @@ import lombok.NoArgsConstructor;
 public class Message implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //private int id;//Mario lo quito
     private Integer idMessage;;
     private String messageText;
 /* Falta saber como se asocia y como toma el Id message*/
@@ -43,7 +42,7 @@ public class Message implements Serializable{
     private Game game;
     
     @ManyToOne
-    @JoinColumn(name = "clientid")
+    @JoinColumn(name = "clientId")
     @JsonIgnoreProperties({"messages","reservations","client"})// es para que lo ignore//ignore para que no se genere ciclo de un ciclo infinito
     private Client client;
 }

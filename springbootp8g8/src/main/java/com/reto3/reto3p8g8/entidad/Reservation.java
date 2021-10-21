@@ -36,7 +36,6 @@ import lombok.NoArgsConstructor;
 public class Reservation implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //private int id;
     private Integer idReservation;
     private Date startDate; // fecha y horas
     private Date devolutionDate;
