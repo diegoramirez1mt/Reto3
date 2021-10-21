@@ -53,14 +53,7 @@ public class ScoreServicio {
     * Creado el 10.10.2021
     * Actualizar todos los reservation desde al JSON, si encuentra con finById, sino que coloque null
     * si existe el elemento lo lleva a cambiarlo, ajustarlo o repisarlo
-    
-    public Score UpdateReservation(Score score){
-        Reservation existeReservation=repository.findById(score.getIdScore()).orElse(null);
-        existeReservation.setStartDate(score.getStartDate());
-        existeReservation.setDevolutionDate(score.getDevolutionDate());
-        return repository.save(existeScore);
-    
-    }*/
+    */
  
     /**
     * Operaciones Basicas Eliminar o DELETE
@@ -68,12 +61,12 @@ public class ScoreServicio {
     * Creado el 10.10.2021
     * Eliminar todos los reservation desde al JSON, si encuentra con finById, sino que coloque null
     * si existe el elemento lo lleva a cambiarlo, ajustarlo o repisarlo
-    
+    */
     public String deleteScore(int id){
         repository.deleteById(id);
         return "Item Removido"+id;
     
-    }*/
+    }
 
 
 }

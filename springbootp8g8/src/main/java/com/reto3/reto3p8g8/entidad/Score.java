@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
  * Escrito el dia 09.10.2021
  * Mapeo de tabla Message 
  * 
- */
+*/ 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
