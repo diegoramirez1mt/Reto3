@@ -37,9 +37,9 @@ public class Score implements Serializable{
     private int calificacion;
 
     @OneToOne    
-    @JoinColumn(name = "game_id")
+    @JoinColumn(name = "gameId")
     @JsonIgnoreProperties({"score"})//ignore para que no se genere ciclo de un ciclo infinito
-    private Reservation reservation;
+    private Reservation reservations;
     
 
 }

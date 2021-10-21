@@ -12,8 +12,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -36,18 +34,12 @@ import lombok.NoArgsConstructor;
 public class Client implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //private int id;
+
     private Integer idClient;
     private String email;
     private String password;
     private String name;
     private Integer age;
-/* Falta saber como se asocia*/
-    //@ManyToOne    
-    //@JoinColumn(name = "message_id")
-    //private Message message;
-    //@JoinColumn(name = "reservation_id")
-    //private Reservation reservation;
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy="client")
     @JsonIgnoreProperties("client")//ignore para que no se genere ciclo de un ciclo infinito

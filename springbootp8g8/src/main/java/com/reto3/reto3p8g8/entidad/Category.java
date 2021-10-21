@@ -38,9 +38,6 @@ public class Category implements Serializable{
     private String name;
     private String description;
     
-    //@ManyToOne    
-    //@JoinColumn(name = "game_id")
-    //private Game game;
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy="category")
     @JsonIgnoreProperties("category")//ignore para que no se genere ciclo de un ciclo infinito
     private List<Game> games;

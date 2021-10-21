@@ -41,8 +41,7 @@ public class Game implements Serializable{
     private String developer;
     private Integer year;
     private String description;
-    
-    
+        
     /** 
     * @author Diego.Ramirez
     * Escrito el dia 09.10.2021
