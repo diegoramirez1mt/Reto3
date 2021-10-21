@@ -5,10 +5,10 @@
 package com.reto3.reto3p8g8.servicio;
 
 import com.reto3.reto3p8g8.entidad.Score;
-import com.reto3.reto3p8g8.repositorio.ScoreRepositorio;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.reto3.reto3p8g8.repositorio.ScoreRepositorio;
 
 /**
  *
@@ -29,8 +29,8 @@ public class ScoreServicio {
     * Creado el 09.10.2021
     * Guardar y crear todos los reservation
     */
-    public Score saveScoreAll(Score score){
-        return repository.save(score);
+    public Score saveScoreAll(Score scoreErr){
+        return repository.save(scoreErr);
     }
     
     

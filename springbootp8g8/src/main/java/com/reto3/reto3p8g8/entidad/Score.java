@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="score")
+@Table(name="scoreErr")
 
 public class Score implements Serializable{
     @Id
@@ -38,7 +38,7 @@ public class Score implements Serializable{
 
     @OneToOne    
     @JoinColumn(name = "gameId")
-    @JsonIgnoreProperties({"score"})//ignore para que no se genere ciclo de un ciclo infinito
+    @JsonIgnoreProperties({"scoreErr"})//ignore para que no se genere ciclo de un ciclo infinito
     private Reservation reservations;
     
 

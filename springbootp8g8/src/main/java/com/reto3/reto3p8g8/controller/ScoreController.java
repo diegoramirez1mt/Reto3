@@ -10,10 +10,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Cuando se despliega el embebido se ejecuta
  */
 @RestController 
-@RequestMapping("/api/Score")
+@RequestMapping("/api/ScoreErr")
 @CrossOrigin(origins = "*", methods={RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 
 public class ScoreController {
@@ -41,20 +39,20 @@ public class ScoreController {
     }
     
     @PostMapping("/save")
-    public ResponseEntity addScore(@RequestBody Score score){
-        service.saveScoreAll(score);
+    public ResponseEntity addScore(@RequestBody Score scoreErr){
+        service.saveScoreAll(scoreErr);
         return ResponseEntity.status(201).build();
     
     }
     /* PENDIENTE
         @PutMapping("/update")
-        public ResponseEntity updateScore(@RequestBody Score score){
+        public ResponseEntity updateScore(@RequestBody Err score){
             service.UpdateScore(score);
             return ResponseEntity.status(201).build();
         }    
     
         @DeleteMapping("/delete")    
-            public ResponseEntity deleteScore(@RequestBody Score score){
+            public ResponseEntity deleteScore(@RequestBody Err score){
             service.deleteScore(score.getId());
             return ResponseEntity.status(204).build();
     } */
