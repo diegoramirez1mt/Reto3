@@ -59,6 +59,5 @@ public class Game implements Serializable{
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy="game")
     @JsonIgnoreProperties({"game","client"})//agrego message//ignore para que no se genere ciclo de un ciclo infinito
     private List<Reservation> reservations;
-    
-    
+       
 }

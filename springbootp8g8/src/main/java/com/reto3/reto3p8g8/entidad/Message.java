@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="message")
+@Table(name = "message")
 
 public class Message implements Serializable{
     @Id
@@ -38,11 +38,11 @@ public class Message implements Serializable{
 /* Falta saber como se asocia y como toma el Id message*/
     @ManyToOne    
     @JoinColumn(name = "id")
-    @JsonIgnoreProperties({"messages","client","reservations"})//ignore para que no se genere ciclo de un ciclo infinito
+    @JsonIgnoreProperties({"messages", "client", "reservations"})//ignore para que no se genere ciclo de un ciclo infinito
     private Game game;
     
     @ManyToOne
     @JoinColumn(name = "clientId")
-    @JsonIgnoreProperties({"messages","reservations","client"})// es para que lo ignore//ignore para que no se genere ciclo de un ciclo infinito
+    @JsonIgnoreProperties({"messages", "reservations", "client"})// es para que lo ignore//ignore para que no se genere ciclo de un ciclo infinito
     private Client client;
 }
